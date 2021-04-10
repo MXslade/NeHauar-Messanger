@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
+using NeHauar.Hubs;
 using NeHauar.Models;
 
 namespace NeHauar
@@ -22,6 +23,18 @@ namespace NeHauar
         {
             services.AddDbContext<ApplicationContext>(opt => opt.UseInMemoryDatabase("NeHauar"));
             services.AddControllers();
+            services.AddSignalR();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("ClientPermission", policy =>
+                {
+                    policy.AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .WithOrigins("http://localhost:3000")
+                        .AllowCredentials();
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -34,6 +47,8 @@ namespace NeHauar
 
             app.UseHttpsRedirection();
 
+            app.UseCors("ClientPermission");
+
             app.UseRouting();
 
             app.UseAuthorization();
@@ -41,6 +56,7 @@ namespace NeHauar
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHub<ChatHub>("/hubs/chat");
             });
         }
     }

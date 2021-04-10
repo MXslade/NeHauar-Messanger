@@ -1,30 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "/home/mxslade/Documents/projects/NeHauar/NeHauar.csproj": {}
+    "/home/mxslade/Documents/projects/NeHauar-Messanger/NeHauar.csproj": {}
   },
   "projects": {
-    "/home/mxslade/Documents/projects/NeHauar/NeHauar.csproj": {
+    "/home/mxslade/Documents/projects/NeHauar-Messanger/NeHauar.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/mxslade/Documents/projects/NeHauar/NeHauar.csproj",
+        "projectUniqueName": "/home/mxslade/Documents/projects/NeHauar-Messanger/NeHauar.csproj",
         "projectName": "NeHauar",
-        "projectPath": "/home/mxslade/Documents/projects/NeHauar/NeHauar.csproj",
+        "projectPath": "/home/mxslade/Documents/projects/NeHauar-Messanger/NeHauar.csproj",
         "packagesPath": "/home/mxslade/.nuget/packages/",
-        "outputPath": "/home/mxslade/Documents/projects/NeHauar/obj/",
+        "outputPath": "/home/mxslade/Documents/projects/NeHauar-Messanger/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/mxslade/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -35,26 +35,32 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.4, )"
+              "version": "[5.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
-              "version": "[5.0.4, )"
+              "version": "[5.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.4, )"
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.TypeScript.MSBuild": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.2.4, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[3.1.0, )"
+              "version": "[5.0.2, )"
             }
           },
           "imports": [
@@ -75,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.202/RuntimeIdentifierGraph.json"
         }
       }
     }
