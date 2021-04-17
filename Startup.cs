@@ -22,8 +22,8 @@ namespace NeHauar
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationContext>(opt => opt.UseInMemoryDatabase("NeHauar"));
-            services.AddControllers();
             services.AddSignalR();
+            services.AddControllers();
 
             services.AddCors(options =>
             {
