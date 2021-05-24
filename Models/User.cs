@@ -9,7 +9,9 @@ namespace NeHauar.Models
         public string LastName { get; set; }
         public string Username { get; set; }
         
+        [JsonIgnore]
         public byte[] PasswordHash { get; set; }
+        [JsonIgnore]
         public byte[] PasswordSalt { get; set; }
         
         [JsonIgnore]

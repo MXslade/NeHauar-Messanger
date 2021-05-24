@@ -11,6 +11,7 @@ namespace NeHauar.Helpers
             CreateMap<User, UserDto>();
             CreateMap<RegisterDto, User>();
             CreateMap<UpdateUserDto, User>();
+            CreateMap<ChatDto, Chat>();
         }
     }
 }
