@@ -11,5 +11,10 @@ namespace NeHauar.Hubs
         {
             await Clients.All.ReceiveMessage(message);
         }
+
+        public async Task SendMessageToSpecificChat(ChatMessage message, string connectionId)
+        {
+            await Clients.Client(connectionId).ReceiveMessage(message);
+        }
     }
 }
